@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="GB2312">
+    <title>CDOS - 命令磁盘操作系统</title>
+    <style type="text/css">
+        body {
+            background-color: #000080;
+            color: #FFFFFF;
+            font-family: "宋体", "Courier New", monospace;
+            font-size: 16px;
+            margin: 0;
+            padding: 10px;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #000080;
+            border: 2px solid #FFFFFF;
+            padding: 10px;
+        }
+        
+        .header {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid #FFFFFF;
+            margin-bottom: 10px;
+        }
+        
+        .menu {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 5px;
+            border: 2px solid #FFFFFF;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .menu a {
+            color: #0000FF;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        .content {
+            background-color: #000080;
+            padding: 10px;
+            border: 2px solid #FFFFFF;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .download-box {
+            background-color: #008000;
+            border: 2px solid #FFFFFF;
+            padding: 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .download-button {
+            background-color: #C0C0C0;
+            color: #000000;
+            border: 2px solid #FFFFFF;
+            padding: 8px 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .dos-window {
+            background-color: #000000;
+            color: #00FF00;
+            border: 2px solid #FFFFFF;
+            padding: 10px;
+            font-family: "Courier New", monospace;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+            border: 2px solid #FFFFFF;
+        }
+        
+        .alert {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            padding: 5px;
+            border: 2px solid #FFFFFF;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CDOS - 命令磁盘操作系统 v1.3</h1>
+        </div>
+        
+        <div class="menu">
+            <a href="#about">关于</a>
+            <a href="#download">下载</a>
+            <a href="#info">系统信息</a>
+            <a href="#help">帮助</a>
+        </div>
+        
+        <div class="content">
+            <div id="about" class="section">
+                <div class="section-title">关于CDOS</div>
+                <p>CDOS是一款高效、轻量的磁盘操作系统，支持各类商业和个人应用。</p>
+                <p>本版本为最新稳定版v1.3，发布于2025年8月，包含多项功能改进和兼容性提升。</p>
+            </div>
+            
+            <div id="download" class="section">
+                <div class="section-title">下载最新版本</div>
+                
+                <div class="download-box">
+                    <h3>CDOS v1.3 正式版</h3>
+                    <p>3.5英寸软盘镜像 (1.44MB)</p>
+                    <a href="C-DOS - 副本.zip" class="download-button">下载 CDOS13.IMG</a>
+                    <p>MD5校验: A1B2C3D4E5F6A7B8C9D0</p>
+                </div>
+                
+               
+            </div>
+            
+            <div id="info" class="section">
+                <div class="section-title">系统信息</div>
+                
+                <div class="dos-window">
+                    C:\> 系统信息<br>
+                    CDOS 版本 1.30 (C) 1990 版权所有<br>
+                    BIOS 版本 2.10 - 硬件初始化完成<br>
+                    检测到640K内存 - 可用512K<br>
+                    硬盘驱动器 (C:) 20MB<br>
+                    软盘驱动器 (A:) 1.44MB<br>
+                    VGA 显示适配器<br>
+                    <br>
+                    C:\> _
+                </div>
+                
+                <div class="alert">
+                    系统要求：IBM PC/AT或兼容机，80386处理器，640K内存，至少一个软盘驱动器
+                </div>
+            </div>
+            
+            <div id="help" class="section">
+                <div class="section-title">帮助与支持</div>
+                <p>邮箱：18931195582@163.com</p>
+                <p>常见问题：大部分MS-DOS程序可在CDOS上运行，支持扩展内存和网络功能。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            CDOS v1.3 - (C) 2025 CDOS软件公司 版权所有<br>
+            最后更新：2025年8月21日
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // 下载确认
+        document.addEventListener('DOMContentLoaded', function() {
+            var downloadLink = document.querySelector('.download-button');
+            downloadLink.addEventListener('click', function(e) {
+                var confirmMsg = '您即将下载CDOS13.IMG (1.44MB)\n';
+                confirmMsg += '根据您的调制解调器速度，下载时间可能需要几分钟\n';
+                confirmMsg += '是否继续？';
+                
+                if (!confirm(confirmMsg)) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
