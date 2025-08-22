@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="GB2312">
+    <title>CHX的个人网页</title>
+    <style type="text/css">
+        body {
+            background-color: #000080;
+            color: #FFFFFF;
+            font-family: "宋体", "Courier New", monospace;
+            font-size: 16px;
+            margin: 0;
+            padding: 10px;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 3px solid #FFFFFF;
+            padding: 15px;
+        }
+        
+        .header {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 8px;
+            text-align: center;
+            border: 2px solid #FFFFFF;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .content {
+            border: 2px solid #FFFFFF;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 3px 5px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .link-button {
+            background-color: #C0C0C0;
+            color: #0000FF;
+            border: 2px solid #FFFFFF;
+            padding: 5px 10px;
+            text-decoration: underline;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+            cursor: pointer; /* 增加鼠标指针样式，提示可点击 */
+        }
+        
+        .footer {
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+            border: 2px solid #FFFFFF;
+        }
+        
+        .hobby-section {
+            border: 2px dashed #FFFFFF;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>欢迎来到我的网页·！！</h1>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="section-title">CHX的个人网页</div>
+                <p>欢迎访问我的个人主页！很高兴能在这里与大家分享我的兴趣和作品。</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">关于我</div>
+                <p>我是一名飞友（航空爱好者），同时开发了CDOS模拟系统。</p>
+                <p>欢迎访问我的页面，了解更多关于我的兴趣和项目信息。</p>
+                
+                <div class="hobby-section">
+                    <p><strong>航空爱好</strong>：热衷于民航领域，喜欢研究各类机型和航空技术</p>
+                    <p><strong>我的项目</strong>：CDOS模拟系统 - 一款复古风格的磁盘操作系统模拟器</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">联系方式</div>
+                <p>电子邮箱：18931195582@136.com</p>
+                <p>工作时间：周六或周日 9:00-18:00</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">相关链接</div>
+                <!-- 为链接添加ID以便于JavaScript处理 -->
+                <a href="CDOS.html" class="link-button" id="cdosLink">点击前往CDOS下载网</a>
+                <p>CDOS模拟系统适合怀旧爱好者和复古计算体验。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            CHX的个人网页 © 1998 版权所有<br>
+            最佳浏览环境：IE 4.0 或 Netscape Navigator 4.0<br>
+            最后更新：1998年10月18日
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // 1990年代风格的简单交互效果
+        alert("欢迎访问CHX的个人网页！请使用IE或Netscape浏览器获得最佳体验。");
+        
+        // 链接点击处理 - 实现跳转功能
+        document.getElementById('cdosLink').addEventListener('click', function(e) {
+            // 显示确认对话框
+            var confirmLeave = confirm('您将离开本页面，前往CDOS下载网站。是否继续？');
+            
+            if (!confirmLeave) {
+                // 如果用户取消，阻止跳转
+                e.preventDefault();
+                alert('已取消跳转，将留在当前页面。');
+            } else {
+                // 如果用户确认，允许跳转
+                // 可以在这里添加跳转前的额外操作
+                alert('正在前往CDOS下载网站...');
+                // 浏览器会自动执行跳转，无需额外代码
+            }
+        });
+    </script>
+</body>
+</html>
+    
