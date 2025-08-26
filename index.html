@@ -116,6 +116,8 @@
                 <!-- 为链接添加ID以便于JavaScript处理 -->
                 <a href="CDOS.html" class="link-button" id="cdosLink">点击前往CDOS下载网</a>
                 <p>CDOS模拟系统适合怀旧爱好者和复古计算体验。</p>
+                <a href="CDOS.html" class="link-button" id="cdosLink">点击前往CHX的blog</a>
+                
             </div>
         </div>
         
@@ -133,16 +135,7 @@
         // 链接点击处理 - 实现跳转功能
         document.getElementById('cdosLink').addEventListener('click', function(e) {
             // 显示确认对话框
-            var confirmLeave = confirm('您将离开本页面，前往CDOS下载网站。是否继续？');
             
-            if (!confirmLeave) {
-                // 如果用户取消，阻止跳转
-                e.preventDefault();
-                alert('已取消跳转，将留在当前页面。');
-            } else {
-                // 如果用户确认，允许跳转
-                // 可以在这里添加跳转前的额外操作
-                alert('点击确定按钮跳转');
                 // 浏览器会自动执行跳转，无需额外代码
             }
         });
