@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入 css 文件 -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- 引入 js 文件 -->
+  <script src="./index.js"></script>
+</head>
+<style>
+  h1 {
+  
+  line-height: 0.1; 
+  }
+  p {
+    line-height: 1;
+  }
+  body{
+    margin: 25px;
+    padding-bottom: 60px;
+  }
+  .btn {            
+    padding: 8px 16px; /* 内边距： */            
+    margin-right: 10px; /* 按钮之间的间距，可调整 */  
+    margin-top: 10px;
+    border: none; /* 去掉默认边框 */            
+    border-radius: 4px; /* 圆角，更美观 */            
+    background-color: #4CAF50; /* 绿色背景，*/            
+    color: white; /* 文字白色 */            
+    cursor: pointer; /* 鼠标悬停变手型 */            
+    font-size: 14px; /* 字体大小 */
+        }
+  .btn:hover {            
+    background-color: #45a049; /* 悬停时稍深的绿色 */
+        }
+  .footer {
+            position: fixed; /* 固定定位，不随滚动移动 */
+            bottom: 0; /* 贴紧窗口底部 */
+            left: 0;
+            width: 100%; /* 宽度占满整个窗口 */
+            height: 50px; /* 底部栏高度 */
+            background-color: #f5f5f5; /* 浅灰色背景，适配内网风格 */
+            line-height: 50px; /* 文字垂直居中 */
+            text-align: center; /* 文字水平居中 */
+            font-size: 14px;
+            color: #666; /* 灰色文字，不刺眼 */
+            border-top: 1px solid #eee; /* 顶部加线，区分内容 */
+        }
+  
+  </style>
+</html>
+<body>
+  <img src=ic.jpg />
+  <div style="text-align: center;">
+   <h1>思凯电力</h1>
+   <button id = "but1", class="btn">数据库</button>
+    <button id = "but2", class="btn">登录</button>
+    <script>
+    function showErrorAlert1() {
+    alert('数据库错误：连接失败');
+}
+
+function showErrorAlert2() {
+    alert('无法登录');
+}
+
+// 获取按钮并绑定事件
+const btn1 = document.getElementById('but1');
+const btn2 = document.getElementById('but2');
+
+if (btn1) {
+    btn1.addEventListener('click', showErrorAlert1);
+}
+
+if (btn2) {
+    btn2.addEventListener('click', showErrorAlert2);
+}
+    </script>
+</div>
+<div class="footer">
+        思凯电力 © 2026 内部使用，禁止外传
+    </div>
+</body>
+
+</html>
