@@ -1,9 +1,0 @@
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: ""
-      permalink: /
-include:
-  - 404.html
