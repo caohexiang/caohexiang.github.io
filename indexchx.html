@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 引入 css 文件 -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- 引入 js 文件 -->
+  <script src="./index.js"></script>
+</head>
+<style>
+/* 自定义鼠标样式（图片路径换成你自己的） */
+.custom-cursor {
+    /* url是鼠标图片路径，auto是备用样式（图片加载失败时显示） */
+        /* 可选：调整鼠标热点（图片的哪个位置对应鼠标点击点，默认左上角） */
+    cursor: url("MOUTH.png") 24 16, auto; /*  表示热点在图片10x10像素处 */
+}  
+h1 {
+  
+  line-height: 0.1; 
+  }
+  p {
+    line-height: 1;
+  }
+  body{
+    margin: 25px;
+    padding-bottom: 60px;
+  }
+  .btn {            
+    padding: 8px 16px; /* 内边距： */            
+    margin-right: 10px; /* 按钮之间的间距，可调整 */  
+    margin-top: 10px;
+    border: none; /* 去掉默认边框 */            
+    border-radius: 4px; /* 圆角，更美观 */            
+    background-color: #4CAF50; /* 绿色背景，*/            
+    color: white; /* 文字白色 */            
+    cursor: pointer; /* 鼠标悬停变手型 */            
+    font-size: 14px; /* 字体大小 */
+        }
+  .btn:hover {            
+    background-color: #45a049;        }
+  .footer {
+            position: fixed; /* 固定定位，不随滚动移动 */
+            bottom: 0; /* 贴紧窗口底部 */
+            left: 0;
+            width: 100%; /* 宽度占满整个窗口 */
+            height: 50px; /* 底部栏高度 */
+            background-color: #f5f5f5; /* 浅灰色背景，适配内网风格 */
+            line-height: 50px; /* 文字垂直居中 */
+            text-align: center; /* 文字水平居中 */
+            font-size: 14px;
+            color: #666; /* 灰色文字，不刺眼 */
+            border-top: 1px solid #eee; /* 顶部加线，区分内容 */
+        }
+  
+  </style>
+</html>
+<body>
+  <img src=ic.jpg />
+  <div style="text-align: center;">
+   <h1>思凯电力</h1>
+   <button id = "but1", class="btn">数据库</button>
+    <button id = "but2", class="btn">登录</button>
+    <script>
+	let flag = 0;
+    function showErrorAlert1() {
+    if(flag === 1){
+	window.location.href = "思凯.md";
+    }else{
+	alert("请先登录！")
+    }
+}
+
+function showErrorAlert2() {
+	let a,b,a1 = "admin",a2 = "admin12345"
+	a=prompt("账号")
+	if (a === null) {
+        	alert("取消登录");
+        	return;
+	}
+	b=prompt("密码")
+	if (a === null) {
+        	alert("取消登录");
+        	return;
+	}
+
+	if(a == a1 && b == a2){
+	    alert("登陆成功")
+	    flag = 1;
+	}else{
+		alert("账号或密码错误，无法登录")
+	}
+
+	    
+	
+	
+}
+
+
+// 获取按钮并绑定事件
+const btn1 = document.getElementById('but1');
+const btn2 = document.getElementById('but2');
+
+if (btn1) {
+    btn1.addEventListener('click', showErrorAlert1);
+}
+
+if (btn2) {
+    btn2.addEventListener('click', showErrorAlert2);
+}
+    </script>
+</div>
+<div class="footer">
+        思凯电力 © 2026 内部使用，禁止外传
+    </div>
+</body>
+
+</html>
